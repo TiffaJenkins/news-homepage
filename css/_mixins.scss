@@ -1,0 +1,90 @@
+//------------Variables------------
+$mainFont: 'Inter', sans-serif;
+$mainH1Color: hsl(240, 100%, 5%);
+$mainH2Color: hsl(35, 77%, 62%);
+$mainH3Color: hsl(36, 100%, 99%);
+$mainPColor: hsl(236, 13%, 42%);
+$mainPBoxColor: hsl(233, 8%, 79%);
+$mainH6Hover: hsl(5, 85%, 63%);
+$mobNavItem: hsl(246, 71%, 5%);
+$reg: 400;
+$semiBold: 500;
+$bold: 700;
+$extraBold: 800;
+$centerContainer: 0 auto;
+$getRid: none;
+$buildBorder: 1px solid red;
+
+
+//------------Containers------------
+@mixin mainContainer {
+    width: 80%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+@mixin mobileContainer {
+    width: 90%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+//-----------Flex mixins-------------
+@mixin flexSeperate {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flexAlignCenter {
+    display: flex;
+    align-items: center;
+}
+
+
+
+//--------Responsive mixins----------
+@mixin rowStack {
+    flex-direction: column;
+}
+
+@mixin fold {
+    @media (max-width: 338px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 395px) {
+        @content;
+    }
+}
+
+@mixin largeMobile {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 862px) {
+        @content;
+    }
+}
+
+@mixin largeTablet {
+    @media (max-width: 996px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 1388px) {
+        @content;
+    }
+}

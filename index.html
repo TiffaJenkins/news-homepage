@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <style>
+    .attribution { font-size: 8px; text-align: center; font-family: sans-serif; }
+    .attribution a { color: hsl(116, 47%, 43%); text-decoration: none; font-family: sans-serif; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="main-container">
+      <nav class="navbar">
+        <img class="main-logo" src="assets\images\logo.svg" alt="M Logo">
+
+        <!--Hamburger-->
+        <div class="toggle-button">
+          <div class="toggle-button_burger"></div>
+        </div>
+
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </div><!--nav menu-->
+      </nav>
+    </div><!--main-container-->
+  </header>
+
+  <!--mobile slide nav-->
+  <nav class="mobile-nav">
+    <a id="mob-nav-item" href="#">Home</a>
+    <a id="mob-nav-item" href="#">New</a>
+    <a id="mob-nav-item" href="#">Popular</a>
+    <a id="mob-nav-item" href="#">Trending</a>
+    <a id="mob-nav-item" href="#">Categories</a>
+  </nav>
+
+  <main>
+    <section class="main-section">
+      <div class="main-container">
+        <div class="row">
+          <div class="col1">
+            <img class="main-img" src="assets/images/image-web-3-desktop.jpg" alt="Web3">
+            <img class="mob-main-img" src="assets/images/image-web-3-mobile.jpg" alt="Web3">
+            <div class="col1-div">
+              <div class="h1-div">
+                <h1 class="main-h1">The Bright Future of Web 3.0?</h1>
+              </div>
+
+              <div class="info-div">
+                <p class="main-p">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+                <a class="main-p-btn" href="#0">READ MORE</a>
+              </div>
+            </div><!--col1 div-->
+          </div><!--col1-->
+
+          <div class="col2">
+            <div class="col2-container">
+              <h1 class="col2-h1">New</h1>
+              <h4 class="col2-h4"><a class="col2-h4-a" src="#0">Hydrogen Vs Electric Cars</a></h4>
+              <p class="col2-p">Will Hydrogen-fueled cars ever catch up to EVs?</p>
+
+              <hr class="soild">
+
+              <h4 class="col2-h4"><a class="col2-h4-a" src="#0">The Downsides of AI Artistry</a></h4>
+              <p class="col2-p">What are the possible adverse effects of on-demand AI image generation?</p>
+
+              <hr class="solid">
+
+              <h4 class="col2-h4"><a class="col2-h4-a" src="#0">Is VC Funding Drying Up?</a></h4>
+              <p class="col2-p">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </div>
+          </div>
+        </div><!--row-->
+      </div><!--main-container-->
+    </section>
+
+    <section class="col3-section">
+      <div class="main-container">
+        <div class="row">
+          <div class="col3">
+            <img class="col3-img" src="assets/images/image-retro-pcs.jpg" alt="Retro PC">
+            <div class="col3-info-div one">
+              <h3>01</h3>
+              <h5 class="col3-h5"><a class="col3-h5-a" src="#0">Reviving Retro PCs</a></h5>
+              <p class="col3-p">What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </div>
+
+          <div class="col3">
+            <img class="col3-img" src="assets/images/image-top-laptops.jpg" alt="Laptop Keyboard">
+            <div class="col3-info-div two">
+              <h3>02</h3>
+              <h5 class="col3-h5"><a class="col3-h5-a" src="#0">Top 10 Laptops of 2022</a></h5>
+              <p class="col3-p">Our best picks for various needs and budgets.</p>
+            </div>
+          </div>
+
+          <div class="col3">
+            <img class="col3-img" src="assets/images/image-gaming-growth.jpg" alt="Console Controller">
+            <div class="col3-info-div">
+              <h3>03</h3>
+              <h5 class="col3-h5"><a class="col3-h5-a" src="#0">The Growth of Gaming</a></h5>
+              <p class="col3-p">How the pandemic has sparked fresh opportunities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <article>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/TiffaJenkins">Tiffa Jenkins</a>.
+    </div>
+  </article>
+  <script src="script.js"></script>
+</body>
+</html>

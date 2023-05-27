@@ -1,0 +1,378 @@
+//--------Main section---------
+.main-section {
+    padding: 0 0 60px 0;
+
+    .main-container {
+        @include mainContainer;
+
+        @include largeMobile {
+            @include mobileContainer;
+        }
+
+        .row {
+
+            .col1 {
+                padding-right: 20px;
+
+                @include largeMobile {
+                    padding-right: 0;
+                }
+
+                @include large {
+                    padding-right: 24px;
+                }
+
+                .main-img {
+                    width: 100%;
+
+                    @include largeMobile {
+                        display: $getRid;
+                    }
+                }
+
+                .mob-main-img {
+                    display: $getRid;
+
+                    @include largeMobile {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                .col1-div {
+                    @include flexSeperate; //come back
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        display: block;
+                    }
+
+                    .h1-div {
+                        max-width: 50%;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            max-width: 90%;
+                        }
+    
+                        .main-h1 {
+                            font-family: $mainFont;
+                            color: $mainH1Color;
+                            font-weight: $extraBold;
+                            font-size: 38px;
+                            line-height: 38px;
+                            margin-top: 20px;
+                            margin-bottom: 2px;
+                            //border: $buildBorder;
+
+                            @include tablet {
+                                font-size: 40px;
+                            }
+
+                            @include large {
+                                font-size: 60px;
+                                margin-top: 30px;
+                                line-height: 60px;
+                            }
+                        }
+                    }
+
+                    .info-div {
+                        max-width: 50%;
+                        padding: 0 0 0 10px;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            min-width: 100%;
+                            padding: 0;
+                            margin-bottom: 60px;
+                        }
+
+                        @include large {
+                            padding: 0 0 0 20px;
+                        }
+
+                        .main-p {
+                            font-family: $mainFont;
+                            color: $mainPColor;
+                            font-weight: $reg;
+                            font-size: 11px;
+                            line-height: 16px;
+                            margin-top: 20px;
+                            margin-bottom: 22px;
+                            //border: $buildBorder;
+
+                            @include largeMobile {
+                                font-size: 14px;
+                                line-height: 20px;
+                                max-width: 95%;
+                            }
+
+                            @include tablet {
+                                margin-bottom: 40px;
+                            }
+
+                            @include large {
+                                margin-top: 30px;
+                                font-size: 16px;
+                                line-height: 22px;
+                                margin-bottom: 50px;
+                            }
+                        }
+
+                        .main-p-btn {
+                            display: inline-block;
+                            background-color: $mainH6Hover;
+                            font-family: $mainFont;
+                            font-weight: $bold;
+                            font-size: 10px;
+                            color: hsl(0, 6%, 86%);
+                            letter-spacing: 3px;
+                            text-decoration: $getRid;
+                            padding: 9px 20px 9px 20px;
+
+                            &:hover {
+                                background-color: $mainH1Color;
+                            }
+
+                            @include largeMobile {
+                                font-size: 14px;
+                                padding: 12px 30px 12px 30px;
+                            }
+
+                            @include large {
+                                font-size: 15px;
+                                padding: 14px 28px 14px 28px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //------Column 2------
+            .col2 {
+                background-color: $mainH1Color;
+                
+                .col2-container {
+                    @include mobileContainer;
+
+                    .col2-h1 {
+                        font-family: $mainFont;
+                        color: $mainH2Color;
+                        font-weight: $extraBold;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            font-size: 30px;
+                            margin-bottom: 35px;
+                        }
+
+                        @include large {
+                            font-size: 40px;
+                            margin-bottom: 40px;
+                        }
+                    }
+
+                    .col2-h4 {
+                        margin-bottom: 6px;
+
+                        @include largeMobile {
+                            margin-top: 26px;
+                            margin-bottom: 12px;
+                        }
+
+                        @include large {
+                            margin-top: 28px;
+                            margin-bottom: 8px;
+                        }
+                        
+                        .col2-h4-a {
+                            font-family: $mainFont;
+                            color: $mainH3Color;
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                            //border: $buildBorder;
+
+                            &:hover {
+                                cursor: pointer;
+                                color: $mainH2Color;
+                            } 
+
+                            @include largeMobile {
+                                font-size: 20px;
+                            }
+
+                            @include large {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+
+                    .col2-p {
+                        font-family: $mainFont;
+                        color: $mainPBoxColor;
+                        font-size: 10px;
+                        line-height: 18px;
+                        margin-top: 0;
+                        margin-bottom: 20px;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            font-size: 14px;
+                            line-height: 22px;
+                            margin-bottom: 24px;
+                            padding-right: 5px;
+                        }
+
+                        @include large {
+                            font-size: 15px;
+                            line-height: 25px;
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    hr .solid {
+                        border-top: 1px solid $mainPBoxColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//------3 column section------
+.col3-section {
+    padding: 0 0 80px 0;
+
+    @include largeMobile {
+        padding: 0 0 50px 0;
+    }
+
+    @include large {
+        padding: 20px 0 100px 0;
+    }
+
+    .main-container {
+        @include mainContainer;
+
+        @include largeMobile {
+            @include mobileContainer;
+        }
+
+        .row {
+
+            .col3 {
+                display: flex;
+                align-content: flex-start;
+                overflow: hidden; 
+
+                @include largeMobile {
+                    margin-bottom: 40px;
+                }
+
+                .col3-img {
+                    display: block;
+                    max-width: 30%;
+                    //border: $buildBorder;
+                }
+
+                .col3-info-div {
+                    padding-left: 15px;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        padding-right: 20px;
+                    }
+
+                    @include large {
+                        padding-left: 22px;
+                    }
+
+                    h3 {
+                        font-family: $mainFont;
+                        color: $mainPBoxColor;
+                        font-size: 20px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            font-size: 28px;
+                        }
+
+                        @include large {
+                            font-size: 32px;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .col3-h5 {
+                        font-family: $mainFont;
+                        font-weight: $extraBold;
+                        font-size: 12px;
+                        margin-top: 5px;
+                        margin-bottom: 0; 
+                        //border: $buildBorder;
+
+                        .col3-h5-a {
+                            font-family: $mainFont;
+                            font-weight: $extraBold;
+                            font-size: 12px;
+                            margin-top: 5px;
+                            margin-bottom: 0; 
+                            //border: $buildBorder;
+
+                            &:hover {
+                                cursor: pointer;
+                                color: $mainH6Hover;
+                            }
+
+                            @include largeMobile {
+                                font-size: 17px;
+                                margin-top: 8px;
+                            }
+    
+                            @include large {
+                                font-size: 17px;
+                                margin-top: 12px;
+                            }
+                        }
+
+                        @include largeMobile {
+                            font-size: 17px;
+                            margin-top: 8px;
+                        }
+
+                        @include large {
+                            font-size: 17px;
+                            margin-top: 12px;
+                        }
+                    }
+
+                    .col3-p {
+                        font-family: $mainFont;
+                        color: $mainPColor;
+                        font-size: 10px;
+                        line-height: 15px;
+                        margin-bottom: 0;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            font-size: 14px;
+                            line-height: 21px;
+                        }
+
+                        @include large {
+                            font-size: 15px;
+                            line-height: 22px;
+                        }
+                    } 
+                }
+
+                .one, .two {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}

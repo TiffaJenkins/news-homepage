@@ -1,0 +1,198 @@
+//------------NavBar------------
+header {
+    padding: 40px 0 20px 0;
+    //border: $buildBorder;
+
+    @include largeMobile {
+        padding: 30px 0 30px 0;
+    }
+
+    @include large {
+        padding: 60px 0 40px 0;
+    }
+
+    .main-container {
+        @include mainContainer;
+
+        @include largeMobile {
+            @include mobileContainer;
+        }
+
+        .navbar {
+            @include flexSeperate;
+            @include flexAlignCenter;
+            position: relative; //for burger toggle button
+            overflow: hidden;
+            //border: $buildBorder;
+
+            //----Mobile Burger icon----
+            .toggle-button {
+                position: absolute;
+                top: 10px;
+                right: 0;
+                display: $getRid;
+                width: 40px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                transition: all 0.5s ease-in-out;
+                //border: $buildBorder;
+
+                @include largeMobile {
+                    display: flex;
+
+                    .toggle-button_burger {
+                        height: 3px;
+                        width: 100%;
+                        background-color: hsl(0, 0%, 0%);
+                        border-radius: 5px;
+                        transition: all 0.5s ease-in-out;
+    
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            height: 3px;
+                            width: 100%;
+                            background-color: hsl(0, 0%, 0%);
+                            border-radius: 5px;
+                            transition: all 0.5s ease-in-out;
+                            transform: translateY(-8px);
+                        }
+    
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            height: 3px;
+                            width: 100%;
+                            background-color: hsl(0, 0%, 0%);
+                            border-radius: 5px;
+                            transition: all 0.5s ease-in-out;
+                            transform: translateY(8px);
+                        }
+                    }
+
+                    //----animation----
+                    &.open {
+
+                        .toggle-button_burger {
+                            transform: translateX(-50px);
+                            background: transparent;
+
+                            &::before {
+                                transform: rotate(45deg) translate(35px, -35px);
+                            }
+
+                            &::after {
+                                transform: rotate(-45deg) translate(35px, 35px);
+                            }
+                        }
+                    } 
+                }
+            }
+
+            .main-logo {
+                display: block;
+            }
+
+            .nav-menu {
+
+                ul {
+                    list-style: $getRid;
+                    display: flex;
+                    //border: $buildBorder;
+    
+                    li {
+                        margin-left: 30px;
+    
+                        a {
+                            text-decoration: $getRid;
+                            font-family: $mainFont;
+                            font-size: 12px;
+                            color: $mainPColor;
+                            font-weight: $reg;
+                            //border: $buildBorder;
+    
+                            &:hover {
+                                color: $mainH6Hover;
+                            }
+    
+                            @include large {
+                                font-size: 15px;
+                            }
+                        }
+                    }                
+                }
+                
+                @include largeMobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//------mobile nav------
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 70%;
+    min-height: 100vh;
+    z-index: 98;
+    display: flex;
+    margin-top: 70px;
+    padding: 90px 0 0 20px;
+    flex-direction: column;
+    transition: 0.5s;
+    box-shadow: -200px 0px 200px hsla(0, 3%, 15%, 0.715);
+    //border: $buildBorder;
+
+    #mob-nav-item {
+        text-decoration: $getRid;
+        font-family: $mainFont;
+        font-size: 18px;
+        font-weight: $semiBold;
+        color: $mobNavItem !important;
+        font-weight: $reg;
+        margin-bottom: 25px;
+        width: 40%;
+        //border: $buildBorder;
+
+        &:hover {
+            color: $mainH6Hover;
+        }
+    }
+}
+
+.mobile-nav.active {
+
+    @include largeMobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        min-height: 100vh;
+        display: flex;
+        z-index: 98;
+        background-color: hsl(100, 100%, 100%);
+        margin-top: 70px;
+        padding: 90px 0 0 20px;
+        flex-direction: column;
+        //border: $buildBorder;
+
+        #mob-nav-item {
+            text-decoration: $getRid;
+            font-family: $mainFont;
+            font-size: 18px;
+            font-weight: $semiBold;
+            color: $mobNavItem !important;
+            font-weight: $reg;
+            margin-bottom: 25px;
+            width: 40%;
+            //border: $buildBorder;
+
+            &:hover {
+                color: $mainH6Hover;
+            }
+        }
+    }
+}
